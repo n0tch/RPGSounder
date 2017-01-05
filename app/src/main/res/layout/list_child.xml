@@ -4,13 +4,26 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="TextView"
+        android:text=""
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtChild"
-        android:textSize="18dp"
-        android:paddingLeft="40dp"
+        android:textSize="18sp"
+        android:paddingStart="40dp"
+        android:paddingEnd="4dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:gravity="start|center_vertical"
         />
+
+    <Button
+        android:id="@+id/button"
+        android:focusable="false"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="-45dp"
+        android:visibility="invisible"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
 </LinearLayout>

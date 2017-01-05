@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -366,6 +367,7 @@ public class MainActivity extends AppCompatActivity{
     public void tocarSom(){
         if(mediaPlayer != null){
             mediaPlayer.start();
+            mediaPlayer.setVolume(1.0f, 3.0f);
         }
     }
 

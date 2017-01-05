@@ -18,10 +18,11 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/imageView"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="40dp" />
+        android:layout_marginBottom="40dp"
+        android:contentDescription="@string/sobre_imagem"/>
 
     <TextView
-        android:text="As músicas contidas nesse aplicativo foram encontradas na internet e não sei se possuem direitos autorais! Por favor, não me processe :D"
+        android:text="@string/sobre_texto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView3"
