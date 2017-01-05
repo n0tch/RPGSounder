@@ -4,4 +4,7 @@
     <string name="close">Close</string>
     <string name="sobre_texto">As músicas contidas nesse aplicativo foram encontradas na internet e não sei se possuem direitos autorais! Por favor, não me processe :D</string>
     <string name="sobre_imagem">Um bardo qualquer agradecendo</string>
+    <string name="sobre_tag">Sobre</string>
+    <string name="sons_tag">Sons</string>
+    <string name="descricao">Sons Ambientes para aventuras de RPG!</string>
 </resources>

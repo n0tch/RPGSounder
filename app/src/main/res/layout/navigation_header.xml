@@ -5,12 +5,12 @@
     android:background="@color/colorPrimaryDark">
 
     <TextView
-        android:text="Sons Ambientes para aventuras de RPG!"
+        android:text="@string/descricao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
         android:textColor="@android:color/background_light"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textAlignment="center"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"

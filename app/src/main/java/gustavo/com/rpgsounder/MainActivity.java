@@ -3,14 +3,12 @@ package gustavo.com.rpgsounder;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.design.internal.NavigationMenuItemView;
-import android.support.design.widget.NavigationView;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
@@ -28,12 +26,17 @@ public class MainActivity extends AppCompatActivity{
     Map<String, List<String>> topico;
     ExpandableListAdapter listAdapter;
     private MediaPlayer mediaPlayer;
-    private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle mToggle;
+    FloatingActionButton btnPause;
+    private boolean isPaused = false;
+    int pos;//variavel para guardar a posicao em que o audio foi pausado
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        btnPause = (FloatingActionButton) findViewById(R.id.btn_pause);
+
+        DrawerLayout drawerLayout;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -395,4 +398,30 @@ public class MainActivity extends AppCompatActivity{
         startActivity(new Intent(MainActivity.this, SobreActivity.class));
     }
 
+    public void pause(View v){
+        //Toast.makeText(MainActivity.this, "Falta criar a tela sobre", Toast.LENGTH_SHORT).show();
+        if(mediaPlayer != null){
+            if(mediaPlayer.isPlaying()){
+                mediaPlayer.pause();
+                pos = mediaPlayer.getCurrentPosition();
+                isPaused = true;
+            }else if(isPaused){
+                mediaPlayer.seekTo(pos);
+                mediaPlayer.start();
+                isPaused = false;
+            }
+        }
+    }
+
+    public void loop(View v){
+        if(mediaPlayer != null){
+            if(mediaPlayer.isLooping()){
+                Toast.makeText(MainActivity.this, "Loop: Desativado", Toast.LENGTH_SHORT).show();
+                mediaPlayer.setLooping(false);
+            }else{
+                Toast.makeText(MainActivity.this, "Loop: Ativado", Toast.LENGTH_SHORT).show();
+                mediaPlayer.setLooping(true);
+            }
+        }
+    }
 }

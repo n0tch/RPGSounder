@@ -16,14 +16,4 @@
         android:gravity="start|center_vertical"
         />
 
-    <Button
-        android:id="@+id/button"
-        android:focusable="false"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginTop="-45dp"
-        android:visibility="invisible"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
 </LinearLayout>

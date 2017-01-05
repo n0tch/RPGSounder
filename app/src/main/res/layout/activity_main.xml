@@ -20,7 +20,34 @@
         app:menu="@menu/navigation_menu"
         android:layout_gravity="start"
         app:headerLayout="@layout/navigation_header">
-
     </android.support.design.widget.NavigationView>
 
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/button_margin"
+            app:backgroundTint="@color/colorPrimary"
+            android:src="@mipmap/ic_pause_white_24dp"
+            android:id="@+id/btn_pause"
+            app:elevation="0dp"
+            android:clickable="true"
+            android:onClick="pause"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="85dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/loop"
+            app:elevation="0dp"
+            android:src="@mipmap/ic_loop_white_24dp"
+            app:backgroundTint="@color/colorPrimary"
+            android:onClick="loop"
+        />
+    </android.support.design.widget.CoordinatorLayout>
 </android.support.v4.widget.DrawerLayout>

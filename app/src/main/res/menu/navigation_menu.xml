@@ -3,13 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/sons"
         android:icon="@mipmap/ic_music_note_black_24dp"
-        android:title="Sons"
+        android:title="@string/sons_tag"
         android:enabled="true"
         />
 
     <item android:id="@+id/sobre"
         android:icon="@mipmap/ic_info_black_24dp"
-        android:title="Sobre"
+        android:title="@string/sobre_tag"
         android:onClick="sobre"
         />
 
